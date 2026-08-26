@@ -1,31 +1,65 @@
-# Project XYZ
+# League of Legends Ranked Game Analysis
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
-
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+**League of Legends Ranked Game Analysis** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
 
 ## Dataset Content
 
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's 100GB limit.
+* The Dataset I have chosen was sourced from kaggle, and initially created through utilisation of League of Legends API. It provides information pertaining to high level ranked matches played thoughout Season 9 of the game. The primary insights it provides are elements such as the character/champion chosen by each of the 10 players, which team won the match, which team completed side objectives first, and how many they completed.
 
 ## Business Requirements
 
-* Describe your business requirements
+* By focusing on information that would be available before a match has begun, it is possible to make a sort of oracle tool, which provides insights on which team is more likely to win, highlighting metrics such as individual character/champion win rate, overall team synergy, etc.
 
 ## Hypothesis and how to validate?
 
-* List here your project hypothesis(es) and how you envision validating it (them) 
+### Hypothesis 1: Using Levene’s Test for Equality of Variances
+* Alternative Hypothesis: Champion win rates exhibit a significant negative correlation with their pick rates, where lower popularity scores are associated with higher win rate variance.
+
+* Null Hypothesis: There is no relationship between a champion's pick rate and win rate variance.
+
+### Hypothesis 2: Using Chi-Square Test
+* Alternative Hypothesis: Individual champion win rates significantly deviate from a balanced 50% baseline distribution, indicating systemic character imbalance in the current meta.
+
+* Null Hypothesis: Every champion possesses an identical, perfectly balanced win rate of exactly 50%.
+
+### Hypothesis 3: Using Two-Sample Independent T-Test
+* Alternative Hypothesis: Highly popular champions have a significantly lower mean win rate compared to moderately popular champions
+
+* Null Hypothesis: There is no significant difference in mean win rates across different popularity tiers.
+
+### Hypothesis 4: Using Binomial Test for Proportions
+* Alternative Hypothesis: The win rate of matches played on the Blue Team (Team1) significantly deviates from a 50% distribution, proving the existence of an advantage.
+
+* Null Hypothesis: The Teams are perfectly fair; Blue Team and Red Team win exactly 50% of matches each.
 
 ## Project Plan
 
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+* Setting up a Kanban board on Trello
+
+* Sourcing the Dataset from Kaggle
+
+* Getting a brief overview of the dataset before establishing objectives.
+
+* Completion of EDA
+
+* Completion of ETL
+
+* Application of Statistical Analysis to answer hypotheses
+
+* Use of Tableau for Dashboarding and Visualisation
+
+* Providing a conclusion in the form of a final analysis
+
+* Overall Evaluation of the project
+
+The plan above was completed in the order of mention. Data was maintained through loading and previewing whenever loaded, to ensure no issues occurred.
 
 ## The rationale to map the business requirements to the Data Visualisations
 
-* List your business requirements and a rationale for mapping them to the Data Visualisations
+* The goal was to analyse the data in such a manner to allow for the creation of an oracle tool, if one wished to do so. The used hypotheses were helpful to reaching this end as they provided evidence  
 
+
+The tarrget was tomcreate visuals to show the relation between different variables that have effect on the malaria incidence in Nigeria. The trend lines and Regression plots helped to convey this. •The trend line conveyed a fluctuation in the decrease of incidence. •While the regression line was inaccurate giving a forecast due to probably the model unable to capture the dat properly or migh be some underreporting of the cases.
 ## Analysis techniques used
 
 * List the data analysis methods used and explain limitations or alternative approaches.
