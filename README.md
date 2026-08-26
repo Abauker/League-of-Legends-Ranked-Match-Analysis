@@ -74,6 +74,7 @@ The following techniques were used:
 
 The dashboard was created using Tableau.
 First, the cleaned data was loaded onto tableau, and then used to generate a dashboard, by creating visualisations related to each of the 4 hypotheses presented earlier.
+It is linked here https://public.tableau.com/authoring/LeagueofLegendsRankedMatchesDashboard/Dashboard1#1
 
 ## Development Roadmap
 
