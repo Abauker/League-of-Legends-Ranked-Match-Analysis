@@ -12,6 +12,8 @@
 
 ## Hypothesis and how to validate?
 
+* Hypotheses were chosen to display additional considerations the model may need, such as winrates not being entirely accurate due to lower sample sizes provided for certain champs, a potential popularity bias creating the opposite problem, and other outside factors, such as the team placed into.
+
 ### Hypothesis 1: Using Levene’s Test for Equality of Variances
 * Alternative Hypothesis: Champion win rates exhibit a significant negative correlation with their pick rates, where lower popularity scores are associated with higher win rate variance.
 
@@ -31,6 +33,12 @@
 * Alternative Hypothesis: The win rate of matches played on the Blue Team (Team1) significantly deviates from a 50% distribution, proving the existence of an advantage.
 
 * Null Hypothesis: The Teams are perfectly fair; Blue Team and Red Team win exactly 50% of matches each.
+
+## Model Creation
+
+* The model created uses Logistic regression as it best suits an A or B selection, which was the ultimate goal of it - To select if Team 1 or Team 2 was more likely to win, with win rates between 0% - 100%
+
+* The model is limited in its accuracy, as there are elements omitted which would otherwise aid it, such as additional considerations of other elements, including teams, which, as shown in hypothesis 4, does have an impact upon the winrate of each champ.
 
 ## Project Plan
 
@@ -78,8 +86,11 @@ It is linked here https://public.tableau.com/authoring/LeagueofLegendsRankedMatc
 
 ## Development Roadmap
 
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+* Initially, I had many issues with the overall structure of the dataset, which I laid out in the EDA, and ironed out in the ETL and Statistical Analysis notebooks. One concern I had with such a dataset is the overall comprehension of it, as it uses game specific terminology, which I wished to eliminate in order to make it much more digestible.
+
+* At certain points in the project, I utilised Co-pilot, and made it apparent when this was the case. Co-Pilot was primarily used in order to bridge gaps which would otherwise be time consuming ventures alone, and otherwise streamline project creation.
+
+* I wish to enhance my skills in model creation, as I do not enjoy relying upon the whims of Co-pilot, and would much rather produce these elements alone, or at least with more confidence, especially as such would allow me to more accurately create what I wished to, without concern of overloading the model in favour of more accuracy.
 
 ## Main Data Analysis Libraries
 
